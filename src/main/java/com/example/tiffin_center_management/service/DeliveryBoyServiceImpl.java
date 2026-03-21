@@ -44,16 +44,6 @@ public class DeliveryBoyServiceImpl implements DeliveryBoyService
                 .map(db -> mapper.map(db, DeliveryBoyDTO.class));
     }
 
-//    // ✅ GET ALL (Pagination)
-//    @Override
-//    public Page<DeliveryBoyDTO> getAll(int page, int size, String sortBy,String sortDir) {
-//
-//        Pageable pageable = PageRequest.of(page, size);
-//
-//        return repository.findAll(pageable)
-//                .map(entity -> mapper.map(entity, DeliveryBoyDTO.class));
-//    }
-
     // ✅ GET BY ID
     @Override
     public DeliveryBoyDTO getById(Long id) {

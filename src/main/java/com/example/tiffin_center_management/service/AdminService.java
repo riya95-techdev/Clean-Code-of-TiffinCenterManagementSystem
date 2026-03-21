@@ -9,23 +9,14 @@ import com.example.tiffin_center_management.payload.SubscriptionDTO;
 public interface AdminService {
 
 	Page<CustomerDTO> getAllCustomers(int page, int size,String sortBy, String sortDir);
-
     Page<DeliveryBoyDTO> getAllDeliveryBoys(int page, int size, String sortBy, String sortDir);
-
     Page<SubscriptionDTO> getAllSubscriptions(int page, int size, String sortBy, String sortDir);
-
     CustomerDTO getCustomerById(Long id);
-
     DeliveryBoyDTO getDeliveryBoyById(Long id);
-
     SubscriptionDTO getSubscriptionById(Long id);
-
     void deleteCustomer(Long id);
-
     void deleteDeliveryBoy(Long id);
-
     void deleteSubscription(Long id);
-    
     void assignDeliveryBoy(Long subId, Long deliveryBoyId);
 	
 }

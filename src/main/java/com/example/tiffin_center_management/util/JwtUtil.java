@@ -27,13 +27,13 @@ public class JwtUtil {
 
 	    private Key key;
 
-	    // 🔐 Secret ko secure key me convert karega
+	    // Secret ko secure key me convert karega
 	    @PostConstruct
 	    public void init() {
 	        this.key = Keys.hmacShaKeyFor(secret.getBytes());
 	    }
 
-	    // ✅ Token Generate
+	    // Token Generate
 	    public String generateToken(String email) {
 	        return Jwts.builder()
 	                .setSubject(email) // user identity
@@ -43,12 +43,12 @@ public class JwtUtil {
 	                .compact();
 	    }
 
-	    // ✅ Email Extract
+	    // Email Extract
 	    public String extractEmail(String token) {
 	        return getClaims(token).getSubject();
 	    }
 
-	    // ✅ Token Validate
+	    // Token Validate
 	    public boolean validateToken(String token, String email) {
 	        try {
 	            final String extractedEmail = extractEmail(token);
@@ -59,12 +59,12 @@ public class JwtUtil {
 	        }
 	    }
 
-	    // 🔍 Check Expiry
+	    // Check Expiry
 	    private boolean isTokenExpired(String token) {
 	        return getClaims(token).getExpiration().before(new Date());
 	    }
 
-	    // 🔐 Claims Extract
+	    //Claims Extract
 	    private Claims getClaims(String token) {
 	        return Jwts.parserBuilder()
 	                .setSigningKey(key)

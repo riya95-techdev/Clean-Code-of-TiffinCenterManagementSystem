@@ -7,7 +7,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-
 import com.example.tiffin_center_management.model.BaseUser;
 import com.example.tiffin_center_management.model.DeliveryBoy;
 

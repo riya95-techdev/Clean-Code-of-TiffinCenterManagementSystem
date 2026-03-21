@@ -114,10 +114,4 @@ public class CustomerServiceImpl implements CustomerService{
                 .toList();
     }
 
-//	@Override
-//	public Page<CustomerDTO> getAll(int page, int size) {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
-	
 }

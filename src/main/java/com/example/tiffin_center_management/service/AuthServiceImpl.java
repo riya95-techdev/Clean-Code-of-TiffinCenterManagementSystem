@@ -74,34 +74,6 @@ public class AuthServiceImpl implements AuthService{
         user.setPassword(encoder.encode(req.getPassword()));
         user.setRole(req.getRole().toUpperCase());
     }
-    
-//    @Override
-//    public void signup(SignupRequest req) {
-//
-//    	if (userRepo.findByEmail(req.getEmail()).isPresent()) {
-//            throw new EmailAlreadyExistsException("Email already registered");
-//        }
-//    	
-//        BaseUser user;
-//
-//        switch (req.getRole()) {
-//            case "ADMIN":
-//                user = new Admin();
-//                break;
-//            case "DELIVERY":
-//                user = new DeliveryBoy();
-//                break;
-//            default:
-//                user = new Customer();
-//        }
-//
-//        user.setName(req.getName());
-//        user.setEmail(req.getEmail());
-//        user.setPassword(encoder.encode(req.getPassword()));
-//        user.setRole(req.getRole());
-//
-//        userRepo.save(user);
-//    }
 
     @Override
     public String login(LoginRequest req) {
