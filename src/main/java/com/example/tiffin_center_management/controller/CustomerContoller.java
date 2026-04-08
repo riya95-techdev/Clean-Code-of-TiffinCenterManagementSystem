@@ -23,7 +23,7 @@ public class CustomerContoller {
 
 	private final CustomerService service;
 
-    // READ ALL (pagination)
+    // READ ALL (pagination k sath)
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping
     public Page<CustomerDTO> getAll(@RequestParam(defaultValue ="0") int page,

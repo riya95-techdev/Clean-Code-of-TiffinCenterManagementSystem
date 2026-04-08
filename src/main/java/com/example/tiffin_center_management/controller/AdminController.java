@@ -27,7 +27,7 @@ public class AdminController {
     private final SubscriptionService subscriptionService;
     private final TiffinScheduler tiffinScheduler;
     
-    // 🔍 FETCH ALL DATA (GET)
+    // FETCH ALL DATA (GET)
     @GetMapping("/customers")
     public Page<CustomerDTO> getAllCustomers(
             @RequestParam(defaultValue = "0") int page,
